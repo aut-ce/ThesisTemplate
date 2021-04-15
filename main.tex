@@ -1,0 +1,65 @@
+%% برگرفته از نسخه‌ی Latex کتابخانه‌ای دانشگاه امیرکبیر
+
+%%% !TEX TS-program = XeLaTeX
+%%% در تنظیمات داکیومنت می‌توانید مقطع مورد نظر را وارد کرده تا تنظیمات در سند اعمال شود.
+\documentclass[oneside,msc]{aut-thesis}
+
+\begin{document}
+\baselineskip=.75cm
+\input{fa_title}
+\vspace*{7cm}
+\thispagestyle{empty}
+\begin{center}
+\includegraphics[height=5cm,width=12cm]{images/in-the-name-of-god}
+\end{center}
+% تاییدیه دفاع
+\input{taid}
+% چنانچه مایل به چاپ صفحات «تقدیم»، «نیایش» و «سپاس‌گزاری» در خروجی نیستید، خط‌های زیر را با گذاشتن ٪  در ابتدای آنها غیرفعال کنید.
+% پایان‌نامه خود را تقدیم کنید
+% نیایش خود را در فایل زیر بنویسید.
+\input{Chant}
+%سپاسگزاری را در فایل زیر بنویسید.
+\input{acknowledgement}
+%دستور زیر برای شماره گذاری صفحات قبل از فصل اول با حروف ابجد است.
+\pagenumbering{alph}
+%-----------------------------------------------------------------------------
+%در فایل زیر دستورات مربوط به نمایش صفحات فهرست مطالب- فهرست اشکال و جداول است.
+\input{TOC-TOF-LOT}
+% در صورت تمایل می‌توانید با فعال کردن دستور بالا، لیست تصاویر را به  پایان‌نامه خود اضافه کنید.
+%-------------------------------------------------------------------------symbols(فهرست نمادها)
+% وجود لیست نمادها الزامیست.(لطفاً نمادهای خود را جایگذین نمادهای پیش‌فرض کنید.)
+\input{list-of-symbols}
+
+\input{blank}
+\pagestyle{style1}
+\pagenumbering{arabic}
+
+%--------------------------------------------------------------------------chapters(فصل ها)
+\include{chapter1}
+\include{chapter2}
+\include{chapter3}
+\include{chapter4}
+\include{chapter5}
+\include{chapter6}
+\include{chapter7}
+
+%--------------------------------------------------------------------------appendix( مراجع و پیوست ها)
+\chapterfont{\vspace*{-2em}\centering\LARGE}%
+
+\appendix
+\bibliographystyle{plain-fa}
+\bibliography{references}
+% \include{appendix1}
+%--------------------------------------------------------------------------dictionary(واژه نامه ها)
+%اگر مایل به داشتن صفحه واژه‌نامه نیستید، خط زیر را غیر فعال کنید.
+\parindent=0pt
+\include{abbr}
+\include{dicen2fa}
+%--------------------------------------------------------------------------index(نمایه)
+%اگر مایل به داشتن صفحه نمایه نیستید، خط زیر را غیر فعال کنید.
+\pagestyle{style7}
+\printindex
+\pagestyle{style7}
+\include{en-abstract}
+\input{en_title}
+\end{document}
